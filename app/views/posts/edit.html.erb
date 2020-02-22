@@ -1,0 +1,27 @@
+<div class="post-index">
+  <h1>編集投稿</h1>
+    <% @post.errors.full_messages.each do |message| %>
+    <div class="form-error">
+      <%= message %>
+    </div>
+    <% end %>
+
+<div class="post-edit-container">
+  <%= form_for @post do |f| %>
+
+  <div class="posts-edit-item">
+    <%= f.label :title, "タイトル", class: "form" %><br>
+    <%= f.text_field :title %><br>
+
+    <%= f.label :content, "感想・まとめ", class: "form" %><br>
+    <%= f.text_area :content %><br>
+
+    <%= f.label :image, "画像", class: "form" %><br>
+    <%= f.file_field :image %><br>
+
+    <%= f.submit "編集する", class: "form" %>
+  </div>
+
+  <% end %>
+</div>
+</div>

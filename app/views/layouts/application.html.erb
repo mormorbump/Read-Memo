@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Read & Memo</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto" >
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    </head>
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+
+<body>
+  <div class="header">
+    <div class="header-logo">
+      <%= link_to("「Read & Memo」", "/home/top") %>
+    </div>
+    <ul class="header-menus">
+      <% if @current_user %>
+      <li>
+        <span class="fa fa-user"></span>
+          <%= link_to(@current_user.name, "/users/#{@current_user.id}") %>
+      </li>
+      <li>
+        <span class="fa fa-pencil"></span>
+          <%= link_to("投稿する", "/posts/new")%>
+      </li>
+      <li>
+        <span class="fa fa-list"></span>
+          <%= link_to("投稿一覧", "/posts/index")%>
+      </li>
+      <li>
+        <span class="fa fa-users"></span>
+          <%= link_to("登録者一覧", "/users/index") %>
+      </li>
+      <li>
+          <span class="fa fa-sign-out"></span>
+          <%= link_to("ログアウトする", "/logout", {method: :post}) %>
+      </li>
+      <% else %>
+      <li>
+          <span class="fa fa-user-secret"></span>
+          <%= link_to("簡単ログイン", "/login_guest", {method: :post})%>
+      </li>
+      <li>
+          <span class="fa fa-user-plus"></span>
+          <%= link_to("新規登録", "/signnup") %>
+      </li>
+      <li>
+          <span class="fa fa-sign-in"></span>
+          <%= link_to("ログインする", "/login") %>
+      </li>
+      <% end %>
+    </ul>
+ </div>
+    <%= yield %>
+  </body>
+
+
+</html>

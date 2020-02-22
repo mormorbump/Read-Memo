@@ -1,0 +1,31 @@
+<div class="user_new">
+  <h1>新規ユーザー登録</h1>
+    <% @user.errors.full_messages.each do |message| %>
+  <div class="form-error">
+    <%= message %>
+  </div>
+    <% end %>
+
+
+  <div class="user_new_item">
+      <%= form_for @user do |f| %>
+
+    <div class="posts-new-item">
+      <%= f.label :name, "ユーザー名", class: "form" %><br>
+      <%= f.text_field :name %><br>
+
+      <%= f.label :image, "画像", class: "form" %><br>
+      <%= f.file_field :image %><br>
+
+      <%= f.label :email, "メールアドレス(※必須)", class: "form" %><br>
+      <%= f.text_field :email %><br>
+
+      <%= f.label :password, "パスワード(※必須)", class: "form" %><br>
+      <%= f.text_field :password %><br>
+
+      <%= f.submit "新規登録", class: "form" %>
+
+    </div>
+      <% end %>
+  </div>
+</div>

@@ -1,0 +1,22 @@
+<div class = "form-error">
+  <% if @error_message %>
+    <%= @error_message %>
+  <% end %>
+</div>
+
+  <div class="user_login_item">
+    <h1>既存ユーザーログイン</h1>
+      <div class="user_login">
+        <%= form_for @user, url: login_path do |f| %>
+
+        <%= f.label :email, "メールアドレス", class: "form" %><br>
+        <%= f.text_field :email %><br>
+
+        <%= f.label :password, "パスワード", class: "form" %><br>
+        <%= f.text_field :password %><br>
+
+        <%= f.submit "ログイン", class: "form" %>
+
+        <% end %>
+      </div>
+  </div>

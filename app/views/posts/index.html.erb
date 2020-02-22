@@ -1,0 +1,21 @@
+<div class="post-index">
+  <h1>投稿一覧</h1>
+
+    <div class="post-index-container">
+      <% @posts.each do |post| %>
+        <div class="post-info">
+          投稿者：<%= link_to(post.user.name, "/users/#{post.user.id}") %>さん
+          投稿日時：<%= post.updated_at %><br>
+            <div class="post_index_content">
+            <h2>[タイトル]</h2><%= link_to(post.title, "/posts/#{post.id}") %><br>
+              <h3>-感想・要約-</h3>  <%= post.content %><br>
+            </div>
+        </div>
+          <div class="post_img">
+            <%= image_tag post.image.to_s %><br>
+          </div>
+          <% end %>
+    </div>
+
+  <%= paginate @posts %>
+</div>

@@ -1,0 +1,99 @@
+* {
+  box-sizing: border-box;
+}
+
+
+body {
+  background-color: #f0f8ff;
+}
+
+.header {
+  display: flex;
+  background-color: 	white;
+  border-bottom: double;
+}
+
+.header-logo {
+  font-size: 30px;
+  padding-top: 20px;
+  padding-left: 5px;
+}
+
+.header-menus {
+  margin-left: auto;
+  font-size: 15px;
+  padding-top: 25px;
+}
+
+
+
+li {
+  list-style: none;
+  display: inline;
+  margin: 10px;
+  display: inline-block;
+  transition: .3s;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
+
+li:hover {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+.form-error {
+  text-align: center;
+  font-size: 15px;
+  color: red;
+  padding-top: 30px;
+}
+
+.top_text_small {
+  font-size: 25px;
+  text-align: center;
+}
+
+
+
+html, body {
+  height: 100%;
+}
+
+.wrapper {
+  text-align: center;
+  background-image: url(https://cdn.pixabay.com/photo/2015/12/08/01/04/bookshelf-1082309_960_720.jpg);
+  opacity: 0.8;
+  height: 100%;
+  color: white;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+
+.wrapper:before {
+  background-color: rgba(0,0,0,0.8);
+  position: absolute;
+  content: '';
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+}
+
+.container {
+  position: absolute;
+  width: 1170px;
+  padding-top: 200px;
+}
+
+.wrapper h1 {
+  font-family: "impact";
+  font-size: 30px;
+  letter-spacing: 10px;
+}
+
+.top_text {
+  letter-spacing: 20px;
+  padding-left: 80px;
+}

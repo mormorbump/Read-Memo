@@ -1,0 +1,25 @@
+<div class="post-index">
+  <h1>タイトル：<%= @post.title %></h1>
+      <div class="post_user_info">
+        <%= image_tag @user.image.thumb.url if @user.image? %>
+        投稿者：<%= link_to(@user.name, "/users/#{@user.id}") %>
+      </div>
+
+  <div class="post-show-container">
+        投稿日時：<%= @post.updated_at %>
+        <h2>-感想・要約-</h2>
+    <div class="post_show_content">
+      <%= @post.content %><br>
+    </div>
+      <% if @post.image? %>
+        <%= image_tag @post.image.to_s %>
+      <% else %>
+        <%= image_tag "/assets/noimage.png", :size => '300x400' %>
+      <% end %><br>
+      <% if @post.user_id == @current_user.id %><br>
+        <%= link_to("編集 ", "/posts/#{@post.id}/edit") %>
+        <%= link_to("消去", "/posts/#{@post.id}/destroy", {method: "post"}) %>
+      <% end %>
+  </div>
+
+</div>
