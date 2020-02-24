@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  get "home/top" => "home#top"
+
 
   get "posts/index" => "posts#index"
   get "posts/new" => "posts#new"
@@ -23,6 +23,6 @@ Rails.application.routes.draw do
   patch "users/:id/update" => "users#update", as: :user
   post "users/:id/destroy" => "users#destroy"
 
-
+  root "home#top"
 
 end
