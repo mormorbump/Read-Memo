@@ -1,5 +1,5 @@
 <div class="post-index">
-  <h1>タイトル：<%= @post.title %></h1>
+  <h1>「<%= @post.title %>」</h1>
       <div class="post_user_info">
         <%= image_tag @user.image.thumb.url if @user.image? %>
         投稿者：<%= link_to(@user.name, "/users/#{@user.id}") %>

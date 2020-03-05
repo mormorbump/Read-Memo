@@ -1,5 +1,6 @@
-require_relative 'boot'
+# frozen_string_literal: true
 
+require_relative 'boot'
 
 require 'rails/all'
 
@@ -14,6 +15,5 @@ module Read
 
     config.i18n.default_locale = :ja
     config.i18n.load_path += Dir[Rails.root.join('config', 'locales', '**', '*.yml').to_s]
-
   end
 end

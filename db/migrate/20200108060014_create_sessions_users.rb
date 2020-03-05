@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class CreateSessionsUsers < ActiveRecord::Migration[6.0]
   def change
     create_table :sessions_users do |t|

@@ -1,5 +1,5 @@
 <div class="user_show">
-  <h1>[<%= @user.name %>さんのページ]</h1>
+  <h2>-<%= @user.name %>-</h2>
 
   <div class="user_info">
     <% if @user.image? %>
@@ -20,8 +20,8 @@
       <div class="post-info">
         タイトル：<%= link_to(post.title,  "/posts/#{post.id}") %><br>
         投稿日時：<%= post.updated_at %><br>
-        <div class="post_index_content">
-          <h2>[感想・要約]</h2><br>
+          <h2>-感想・要約-</h2><br>
+          <div class="post_index_content">
           <%= post.content %><br>
         </div>
       </div>

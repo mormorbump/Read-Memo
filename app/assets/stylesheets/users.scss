@@ -1,4 +1,7 @@
 /* user/index */
+.users_index h1 {
+  text-align: center;
+}
 
 .users_list_container {
   padding-bottom: 15px;
@@ -6,10 +9,10 @@
 
 .users_index_list {
   margin-top: 20px;
-margin-bottom: 20px;
-width: 25%;
-float: left;
-text-align: center;
+  margin-bottom: 20px;
+  width: 25%;
+  float: left;
+  text-align: center;
 
   img {
    width: 80px;
@@ -21,26 +24,23 @@ text-align: center;
 
 
 
-/* login */
+/* users/login_form */
 
 .user_login_item {
   font-size: 15px;
 padding-top: 5px;
-word-break: break-all;
+width: 320px;
+margin: 0 auto;
 text-align: center;
 }
 
 .user_login {
-  margin-top: 40px;
-  margin-left: 500px;
   padding: 50px;
+  margin-left: 10px;
   background-color: white;
   border: 1px solid #e6ecf0;
   display: table;
 
-  p {
-    padding: 5px;
-  }
 }
 
 
@@ -50,14 +50,16 @@ text-align: center;
 .user_new {
   font-size: 15px;
 padding-top: 5px;
-word-break: break-all;
+
 text-align: center;
 }
 
-.user_new_item {
-  margin-top: 40px;
-  margin-left: 447px;
-  padding: 50px;
+.user-new-item {
+  margin-top: 50px;
+  padding: 0px;
+  margin-left: -20px;
+  width: 320px;
+  margin: 0 auto;
   background-color: white;
   border: 1px solid #e6ecf0;
   display: table;
@@ -72,6 +74,8 @@ text-align: center;
 /* user/show */
 
 .user_show {
+  width: 370px;
+  margin: 0 auto;
   text-align: center;
 }
 
@@ -79,23 +83,9 @@ text-align: center;
   margin-top: 40px;
 }
 
-.user_show_container {
-  text-align: center;
-  margin-left: 435px;
-  background-color: white;
-  display: table;
-}
-
-.user_show_post_info {
-  font-size: 15px;
-  width: 400px;
-  padding-top: 5px;
-  word-break: break-all;
-}
-
 .user_posts_container {
   margin-top: 40px;
-  margin-left: 435px;
+  margin-left: -15px;
   background-color: white;
   border: 1px solid #e6ecf0;
   display: table;
@@ -103,20 +93,22 @@ text-align: center;
 
 .user_posts_img {
   padding-bottom: 35px;
-    border-bottom: 5px solid #e6ecf0;
+  border-bottom: 5px solid #e6ecf0;
 }
 
 
 
 /* user/edit */
 
-.user-index {
+.user-edit-index {
+  width: 370px;
+  margin: 0 auto;
   text-align: center;
 }
 
 .user-edit-container {
   margin-top: 40px;
-  margin-left: 440px;
+  margin-left: -20px;
   padding: 50px;
   background-color: white;
   border: 1px solid #e6ecf0;

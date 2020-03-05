@@ -1,0 +1,149 @@
+/*iPadサイズ*/
+@media (max-width: 1000px ) {
+
+  * {
+  margin: 0 auto; padding: 0;
+  max-height: 1100px;
+  }
+
+  .header-space {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .header-logo　{
+    width: 370px;
+    margin: 0 auto;
+  }
+
+  .header-menus {
+    margin: 0 auto;
+  }
+
+  ul {
+    white-space: nowrap;
+    text-align: right;
+    margin: 0px;
+    }
+
+  li {
+      margin: 0px;
+    }
+
+
+/* post/index */
+  .post-index-container {
+    width: 370px;
+    margin: 0 auto;
+    text-align: center;
+    margin-left: -10px;
+  }
+
+
+/* post/new */
+  .post-new-container {
+    margin-top: 20px;
+    margin-left: 0px;
+  }
+
+
+/* post/show */
+  .post-show-container {
+    margin-top: 20px;
+    margin-left: 0px;
+  }
+}
+
+
+
+/*スマホサイズ*/
+@media (max-width: 650px ) {
+
+  * {
+  margin: 0 auto; padding: 0;
+  max-height: 736px;
+  }
+
+  .header-space {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .header-menus {
+    white-space: nowrap;
+    font-size: 10px;
+    padding-top: 0px;
+    margin: 0 auto;
+  }
+
+  li {
+    width: 50px;
+    flex: auto;
+    text-align: center;
+    margin: 0px;
+    display: inline;
+    transition: .3s;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    }
+
+    .top_text {
+      letter-spacing: 0px;
+      padding-left: 0px;
+    }
+
+
+    /* user/login_form */
+    .user_login {
+      margin-left: 0px;
+    }
+
+    /* user/new */
+  .user-new-item {
+    width: 320px;
+    margin: 0 auto;
+    padding: 20px;
+    padding: 0px;
+  }
+
+  /* user/show */
+.user_show {
+  width: 200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+ .user_posts_container {
+   margin-top: 40px;
+   margin-left: 0px;
+   padding: -10px;
+   background-color: white;
+   border: 1px solid #e6ecf0;
+   display: table;
+}
+
+
+
+
+/* user/edit */
+.user-edit-index {
+  width: 200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.user-edit-container {
+  margin-top: 40px;
+  margin-left: -15px;
+  background-color: white;
+  border: 1px solid #e6ecf0;
+  display: table;
+}
+
+.user-edit-item {
+  width: 300px;
+  font-size: 15px;
+  padding-top: 5px;
+  word-break: break-all;
+}
+}

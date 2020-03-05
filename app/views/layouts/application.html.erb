@@ -7,49 +7,54 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="responsive.css">
+
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
-    </head>
-<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  </head>
 
 <body>
-  <div class="header">
+<header>
+  <div class="header-space">
     <div class="header-logo">
       <%= link_to("「Read & Memo」", "/") %>
     </div>
+
     <ul class="header-menus">
       <% if @current_user %>
-      <li>
+      <li class="li1">
         <span class="fa fa-user"></span>
           <%= link_to(@current_user.name, "/users/#{@current_user.id}") %>
       </li>
-      <li>
+      <li class="li2">
         <span class="fa fa-pencil"></span>
-          <%= link_to("投稿する", "/posts/new")%>
+          <%= link_to("投稿", "/posts/new")%>
       </li>
-      <li>
+      <li class="li3">
         <span class="fa fa-list"></span>
           <%= link_to("投稿一覧", "/posts/index")%>
       </li>
-      <li>
+      <li class="li4">
         <span class="fa fa-users"></span>
-          <%= link_to("登録者一覧", "/users/index") %>
+          <%= link_to("登録者", "/users/index") %>
       </li>
-      <li>
+      <li class="li5">
           <span class="fa fa-sign-out"></span>
-          <%= link_to("ログアウトする", "/logout", {method: :post}) %>
+          <%= link_to("ログアウト", "/logout", {method: :post}) %>
       </li>
       <% else %>
-      <li>
+      <li class="li6">
           <span class="fa fa-user-secret"></span>
           <%= link_to("簡単ログイン", "/login_guest", {method: :post})%>
       </li>
-      <li>
+      <li class="li7">
           <span class="fa fa-user-plus"></span>
           <%= link_to("新規登録", "/signnup") %>
       </li>
-      <li>
+      <li class="li8">
           <span class="fa fa-sign-in"></span>
           <%= link_to("ログインする", "/login") %>
       </li>
@@ -57,7 +62,9 @@
     </ul>
  </div>
     <%= yield %>
-  </body>
 
+
+</header>
+</body>
 
 </html>

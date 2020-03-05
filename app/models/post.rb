@@ -1,18 +1,15 @@
+# frozen_string_literal: true
+
 class Post < ApplicationRecord
   mount_uploader :image, ImageUploader
 
-  validates :title, {presence: true}
-  validates :content, {presence: true}
-  validates :user_id, {presence: true}
+  validates :title, { presence: true }
+  validates :content, { presence: true }
+  validates :user_id, { presence: true }
 
   belongs_to :user
 
-
-
-
   def user
-    return User.find_by(id: self.user_id)
+    User.find_by(id: user_id)
   end
-
-
 end
