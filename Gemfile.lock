@@ -518,7 +518,7 @@ DEPENDENCIES
   capybara (>= 2.15)
   carrierwave (= 1.2.2)
   devise
-  fog (= 1.42)
+  fog
   jbuilder (~> 2.7)
   jquery-rails
   kaminari (~> 0.17.0)
