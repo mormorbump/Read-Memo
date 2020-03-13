@@ -45,7 +45,7 @@ hogehoge
 Ruby 2.6.3 
 
 ・フレームワーク
-Ruby on Rails 6.0.2.1
+Ruby on Rails 6.0.2
 
 ・開発環境
 Atom
