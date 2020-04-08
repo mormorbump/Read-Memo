@@ -12,11 +12,6 @@
 
 ActiveRecord::Schema.define(version: 2020_02_17_025538) do
 
-  create_table "destroys", force: :cascade do |t|
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-
   create_table "posts", force: :cascade do |t|
     t.text "content"
     t.datetime "created_at", precision: 6, null: false
@@ -25,15 +20,6 @@ ActiveRecord::Schema.define(version: 2020_02_17_025538) do
     t.integer "user_id"
     t.string "title"
     t.float "rate"
-  end
-
-  create_table "sessions_users", force: :cascade do |t|
-    t.string "name"
-    t.string "email"
-    t.string "password"
-    t.string "image"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "users", force: :cascade do |t|
